@@ -17,7 +17,7 @@ function Header() {
               Bol Bihar
               <div className="w-16 flex-none">
                 <img
-                  alt={post?.title}
+                  alt={'bol bihar logo'}
                   height="60px"
                   width="60px"
                   className="rounded-full align-middle "
