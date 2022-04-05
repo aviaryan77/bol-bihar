@@ -14,7 +14,16 @@ function Header() {
         <div className="block md:float-left">
           <Link href="/">
             <span className="curser-pointer text-4xl font-bold text-white">
-              GraphCMS
+              Bol Bihar
+              <div className="w-16 flex-none">
+                <img
+                  alt={post?.title}
+                  height="60px"
+                  width="60px"
+                  className="rounded-full align-middle "
+                  src={'/logo.png'}
+                />
+              </div>
             </span>
           </Link>
         </div>

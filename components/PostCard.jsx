@@ -1,28 +1,21 @@
-import React from 'react'
-import Image from 'next/image'
-import moment from 'moment'
-import Link from 'next/link'
+import React from 'react';
+import Image from 'next/image';
+import moment from 'moment';
+import Link from 'next/link';
 
-// import { grpahCMSImageLoader } from '../util'
+import { graphCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => {
   return (
     <div className="mb-8 rounded-lg bg-white p-0 pb-12 shadow-lg lg:p-8">
-      {/* <div className="relative shadow-md inline-block w-full h-60 lg:h-80 mb-6">
-      <Image
-        unoptimized
-        loader={grpahCMSImageLoader}
-        alt={post.title}
-        className="shadow-lg rounded-t-lg lg:rounded-lg"
-        layout="fill"
-        src={post.featuredImage.url}
-      />
-    </div> */}
-      <div className="relative mb-6 overflow-hidden pb-80 shadow-md">
-        <img
+      <div className="relative mb-6 inline-block h-60 w-full shadow-md lg:h-80">
+        <Image
+          unoptimized
+          loader={graphCMSImageLoader}
+          alt={post.title}
+          className="rounded-t-lg shadow-lg lg:rounded-lg"
+          layout="fill"
           src={post.featuredImage.url}
-          alt=""
-          className="absolute h-80 w-full rounded-t-lg object-cover  object-top shadow-lg lg:rounded-lg"
         />
       </div>
 
@@ -33,7 +26,7 @@ const PostCard = ({ post }) => {
         <div className="mb-4 mr-8 flex w-full  items-center justify-center lg:mb-0 lg:w-auto">
           <Image
             unoptimized
-            // loader={grpahCMSImageLoader}
+            loader={graphCMSImageLoader}
             alt={post?.author?.name}
             height="30px"
             width="30px"
@@ -75,7 +68,7 @@ const PostCard = ({ post }) => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PostCard
+export default PostCard;
