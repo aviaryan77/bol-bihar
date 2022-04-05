@@ -8,7 +8,7 @@ const HomePage = ({ posts }) => {
   return (
     <div className="container mx-auto mb-8  px-12">
       <Head>
-        <title>Bol Bihar Blog</title>
+        <title>बोल बिहार|Bihar की ताज़ा ख़बर| ब्रेकिंग न्यूज़ In Hindi </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <FeaturedPosts />
@@ -34,6 +34,7 @@ export async function getStaticProps() {
   const posts = (await getPosts()) || [];
   return {
     props: { posts },
+    revalidate: 60,
   };
 }
 

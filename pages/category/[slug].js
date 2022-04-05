@@ -1,10 +1,11 @@
 import React from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import { getCategories, getCategoryPost } from '@/services';
 import { PostCard, Categories, Loader } from '@/components';
 
-const CategoryPost = ({ posts }) => {
+const CategoryPost = ({ posts, slug }) => {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -13,6 +14,9 @@ const CategoryPost = ({ posts }) => {
 
   return (
     <div className="container mx-auto mb-8 px-10">
+      <Head>
+        <title>बोल बिहार|{slug} </title>
+      </Head>
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
           {posts.map((post, index) => (
@@ -35,7 +39,7 @@ export async function getStaticProps({ params }) {
   const posts = await getCategoryPost(params.slug);
 
   return {
-    props: { posts },
+    props: { posts: posts, slug: params.slug },
     revalidate: 600,
   };
 }
