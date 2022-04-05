@@ -23,7 +23,7 @@ function Header() {
                   src={'/logo.webp'}
                 />
               </div>
-              Bol Bihar
+              बोल बिहार
             </span>
           </Link>
         </div>
