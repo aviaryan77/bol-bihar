@@ -13,17 +13,17 @@ function Header() {
       <div className="inline-block w-full border-b border-blue-400 py-8">
         <div className="block md:float-left">
           <Link href="/">
-            <span className="curser-pointer text-4xl font-bold text-white">
-              Bol Bihar
-              <div className="w-16 flex-none">
+            <span className="curser-pointer flex items-center text-4xl font-bold text-white">
+              <div className="mr-2 h-16 w-16 flex-none rounded-full border-b border-r border-gray-50">
                 <img
                   alt={'bol bihar logo'}
-                  height="60px"
-                  width="60px"
+                  height="120px"
+                  width="120px"
                   className="rounded-full align-middle "
                   src={'/logo.png'}
                 />
               </div>
+              Bol Bihar
             </span>
           </Link>
         </div>
