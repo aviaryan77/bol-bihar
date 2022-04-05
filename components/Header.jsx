@@ -20,7 +20,7 @@ function Header() {
                   height="120px"
                   width="120px"
                   className="rounded-full align-middle "
-                  src={'/logo.png'}
+                  src={'/logo.webp'}
                 />
               </div>
               Bol Bihar
