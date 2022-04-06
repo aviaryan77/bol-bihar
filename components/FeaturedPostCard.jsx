@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
+import { graphCMSImageLoader } from '@/util';
 import Link from 'next/link';
 
 const FeaturedPostCard = ({ post }) => (
@@ -18,14 +19,18 @@ const FeaturedPostCard = ({ post }) => (
         {post.title}
       </p>
       <div className="absolute bottom-5 flex w-full items-center justify-center">
-        <Image
-          unoptimized
-          alt={post.author.name}
-          height="30px"
-          width="30px"
-          className="rounded-full align-middle drop-shadow-lg"
-          src={post.author.photo.url}
-        />
+        <div className="h-8 w-8 flex-none  align-middle">
+          <Image
+            loader={graphCMSImageLoader}
+            alt={post.author.name}
+            className="rounded-full align-middle drop-shadow-lg"
+            src={post?.author?.photo?.url || '/bg.jpeg'}
+            height={30}
+            width={30}
+            objectFit="cover"
+            layout="responsive"
+          />
+        </div>
         <p className="text-shadow ml-2 inline align-middle font-medium text-white">
           {post.author.name}
         </p>

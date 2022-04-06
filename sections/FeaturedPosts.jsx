@@ -75,24 +75,23 @@ const FeaturedPosts = () => {
 
   return (
     <div>
-      {!dataLoaded ? (
-        <Carousel
-          infinite
-          customLeftArrow={customLeftArrow}
-          customRightArrow={customRightArrow}
-          responsive={responsive}
-          itemClass="px-4"
-        >
-          {featuredPosts.map((post, index) => (
+      <Carousel
+        infinite
+        customLeftArrow={customLeftArrow}
+        customRightArrow={customRightArrow}
+        responsive={responsive}
+        itemClass="px-4"
+      >
+        {!dataLoaded ? (
+          featuredPosts.map((post, index) => (
             <FeaturedPostCard key={index} post={post} />
-          ))}
-        </Carousel>
-      ) : (
-        <div className="flex min-h-[288px] ">
-          <SkeletonCard key={1} />
-          <SkeletonCard key={2} />
-        </div>
-      )}
+          ))
+        ) : (
+          <div className="flex min-h-[288px] w-full ">
+            <SkeletonCard key={1} />
+          </div>
+        )}
+      </Carousel>
     </div>
   );
 };
