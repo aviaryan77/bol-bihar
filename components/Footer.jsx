@@ -37,10 +37,10 @@ const Footer = () => {
                 <i className="fab fa-whatsapp"></i>
               </button>
               <button
-                className="align-center mr-2 h-10 w-10 items-center justify-center rounded-full bg-white font-normal text-white shadow-lg outline-none focus:outline-none"
+                className="align-center mr-2 h-10 w-10 items-center justify-center rounded-full bg-white font-normal  shadow-lg outline-none focus:outline-none"
                 type="button"
               >
-                <i className="fab fa-github"></i>
+                <i className="fab fa-linkedin"></i>
               </button>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Footer = () => {
                       className="block pb-2 text-sm font-semibold text-white hover:text-pink-500"
                       href="#"
                     >
-                      Github
+                      Technology
                     </a>
                   </li>
                   <li>
@@ -80,7 +80,7 @@ const Footer = () => {
                       className="block pb-2 text-sm font-semibold text-white hover:text-pink-500"
                       href="#"
                     >
-                      Free Products
+                      Digital Products
                     </a>
                   </li>
                 </ul>
@@ -95,7 +95,7 @@ const Footer = () => {
                       className="block pb-2 text-sm font-semibold text-white hover:text-pink-500"
                       href="#"
                     >
-                      MIT License
+                      Resources
                     </a>
                   </li>
                   <li>
