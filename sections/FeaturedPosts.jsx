@@ -24,15 +24,15 @@ const responsive = {
   },
 };
 
-const FeaturedPosts = () => {
+const FeaturedPosts = ({ posts }) => {
   const [featuredPosts, setFeaturedPosts] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    getFeaturedPosts().then((result) => {
-      setFeaturedPosts(result);
-      setDataLoaded(true);
-    });
+    // getFeaturedPosts().then((result) => {
+    setFeaturedPosts(posts);
+    setDataLoaded(true);
+    // });
   }, []);
 
   const customLeftArrow = (
