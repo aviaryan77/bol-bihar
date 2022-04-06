@@ -3,15 +3,14 @@ import Image from 'next/image';
 import { PostCard, PostWidget, Categories } from '@/components';
 import { getPosts } from '@/services';
 import { FeaturedPosts } from '../sections/index';
+import { Meta } from '@/components/Meta';
 
 const HomePage = ({ posts }) => {
   return (
     <div className="container mx-auto mb-8  px-12">
-      <Head>
-        <title>बोल बिहार|Bihar की ताज़ा ख़बर| ब्रेकिंग न्यूज़ In Hindi </title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <FeaturedPosts />
+      <div className="mb-8 min-h-[288px]">
+        <FeaturedPosts />
+      </div>
       <div className=" grid grid-cols-1 gap-12  lg:grid-cols-12">
         <div className="col-span-1  lg:col-span-8">
           {posts.map((post) => (

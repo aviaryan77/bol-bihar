@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-import { FeaturedPostCard } from '../components';
+import { FeaturedPostCard, SkeletonCard } from '../components';
 import { getFeaturedPosts } from '../services';
 
 const responsive = {
@@ -74,19 +74,25 @@ const FeaturedPosts = () => {
   );
 
   return (
-    <div className="mb-8">
-      <Carousel
-        infinite
-        customLeftArrow={customLeftArrow}
-        customRightArrow={customRightArrow}
-        responsive={responsive}
-        itemClass="px-4"
-      >
-        {dataLoaded &&
-          featuredPosts.map((post, index) => (
+    <div>
+      {dataLoaded ? (
+        <Carousel
+          infinite
+          customLeftArrow={customLeftArrow}
+          customRightArrow={customRightArrow}
+          responsive={responsive}
+          itemClass="px-4"
+        >
+          {featuredPosts.map((post, index) => (
             <FeaturedPostCard key={index} post={post} />
           ))}
-      </Carousel>
+        </Carousel>
+      ) : (
+        <div className="flex w-[288]">
+          <SkeletonCard />
+          <SkeletonCard />
+        </div>
+      )}
     </div>
   );
 };
