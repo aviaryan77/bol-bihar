@@ -48,13 +48,14 @@ function PostDetail({ post }) {
         );
       case 'image':
         return (
-          <div className="select-nones">
+          <div className="w-full py-4 ">
             <Image
               loader={graphCMSImageLoader}
               height={obj.height}
               width={obj.width}
-              className="rounded-full align-middle"
+              className="rounded-sm align-middle"
               src={obj?.src || '/bg.jpeg'}
+              layout="responsive"
               key={index}
               alt={obj.title}
             />
