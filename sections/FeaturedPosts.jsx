@@ -82,7 +82,7 @@ const FeaturedPosts = () => {
         responsive={responsive}
         itemClass="px-4"
       >
-        {!dataLoaded ? (
+        {dataLoaded ? (
           featuredPosts.map((post, index) => (
             <FeaturedPostCard key={index} post={post} />
           ))
