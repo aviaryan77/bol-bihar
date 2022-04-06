@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import moment from 'moment'
-import Link from 'next/link'
-import { getRecentPosts, getSimilarPosts } from '@/services'
+import React, { useState, useEffect } from 'react';
+import moment from 'moment';
+import Link from 'next/link';
+import { getRecentPosts, getSimilarPosts } from '@/services';
+import Image from 'next/image';
+import { graphCMSImageLoader } from '@/util';
 
 const PostWidget = ({ categories, slug }) => {
-  const [relatedPosts, setRelatedPosts] = useState([])
+  const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     if (slug) {
       getSimilarPosts(categories, slug).then((result) =>
         setRelatedPosts(result)
-      )
+      );
     } else {
-      getRecentPosts().then((result) => setRelatedPosts(result))
+      getRecentPosts().then((result) => setRelatedPosts(result));
     }
-  }, [slug])
+  }, [slug]);
 
   return (
     <div className="mb-8 rounded-lg bg-white p-8 shadow-lg">
@@ -24,17 +26,18 @@ const PostWidget = ({ categories, slug }) => {
       {relatedPosts.map((post) => {
         return (
           <div key={post.title} className="mb-4 flex w-full items-center">
-            <div className="w-16 flex-none">
-              <img
+            <div className="w-16 flex-none  align-middle">
+              <Image
                 alt={post?.title}
                 height="60px"
                 width="60px"
-                className="rounded-full align-middle "
-                src={post?.featuredImage?.url}
+                className="rounded-full"
+                src={post?.featuredImage?.url || '/bg.jpeg'}
+                loader={graphCMSImageLoader}
               />
             </div>
             <div className="ml-4 flex-grow">
-              <p className="text-grey-500 font-xs">
+              <p className="font-light text-gray-500 ">
                 {moment(post?.createdAt).format('MMM DD, YYYY')}
               </p>
               <Link
@@ -46,10 +49,10 @@ const PostWidget = ({ categories, slug }) => {
               </Link>
             </div>
           </div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default PostWidget
+export default PostWidget;

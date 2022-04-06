@@ -20,7 +20,7 @@ function Comments({ slug }) {
           {comments.map((comment) => (
             <div
               key={comment?.createdAt}
-              className="border-grey-100 mb-4 border-b pb-4"
+              className="mb-4 border-b border-gray-100 pb-4"
             >
               <p className="mb-4">
                 <span className="font-semibold">{comment.name}</span> on{' '}

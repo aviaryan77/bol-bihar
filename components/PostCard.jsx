@@ -23,7 +23,7 @@ const PostCard = ({ post }) => {
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className="mb-8 block w-full items-center justify-center text-center lg:flex">
-        <div className="mb-4 mr-8 flex w-full  items-center justify-center lg:mb-0 lg:w-auto">
+        <div className="mb-4 mr-8 flex w-full   items-center justify-center lg:mb-0 lg:w-auto">
           <Image
             unoptimized
             loader={graphCMSImageLoader}
@@ -57,12 +57,12 @@ const PostCard = ({ post }) => {
           </span>
         </div>
       </div>
-      <p className="mb-8 px-4 text-center text-lg font-normal text-gray-700 lg:px-20">
+      <p className="mb-8 select-none px-4 text-center text-lg font-normal text-gray-700 lg:px-20">
         {post.excerpt}
       </p>
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
-          <span className="ease inline-block transform cursor-pointer rounded-full bg-pink-600 px-8 py-3 text-lg font-medium text-white transition duration-500 hover:-translate-y-1">
+          <span className="ease inline-block transform cursor-pointer select-none rounded-full bg-pink-600 px-8 py-3 text-lg font-medium text-white transition duration-500 hover:-translate-y-1">
             Continue Reading
           </span>
         </Link>

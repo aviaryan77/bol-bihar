@@ -1,74 +1,82 @@
-import moment from 'moment'
-import React from 'react'
-import Image from 'next/image'
+import moment from 'moment';
+import React from 'react';
+import Image from 'next/image';
+import { graphCMSImageLoader } from '@/util';
 
 function PostDetail({ post }) {
   const getContentFragment = (index, text, obj, type) => {
-    let modifiedText = text
+    let modifiedText = text;
 
     if (obj) {
       if (obj.bold) {
-        modifiedText = <b key={index}>{text}</b>
+        modifiedText = <b key={index}>{text}</b>;
       }
 
       if (obj.italic) {
-        modifiedText = <em key={index}>{text}</em>
+        modifiedText = <em key={index}>{text}</em>;
       }
 
       if (obj.underline) {
-        modifiedText = <u key={index}>{text}</u>
+        modifiedText = <u key={index}>{text}</u>;
       }
     }
 
     switch (type) {
       case 'heading-three':
         return (
-          <h3 key={index} className="mb-4 text-xl font-semibold">
+          <h3 key={index} className="mb-4 select-none  text-xl font-semibold">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
           </h3>
-        )
+        );
       case 'paragraph':
         return (
-          <p key={index} className="mb-8">
+          <p key={index} className=" mb-8 select-none">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
           </p>
-        )
+        );
       case 'heading-four':
         return (
-          <h4 key={index} className="text-md mb-4 font-semibold">
+          <h4 key={index} className="text-md mb-4 select-none font-semibold">
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
           </h4>
-        )
+        );
       case 'image':
         return (
-          <img
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={obj.width}
-            src={obj.src}
-          />
-        )
+          <div className="select-nones">
+            <Image
+              loader={graphCMSImageLoader}
+              height={obj.height}
+              width={obj.width}
+              className="rounded-full align-middle"
+              src={obj?.src || '/bg.jpeg'}
+              key={index}
+              alt={obj.title}
+            />
+          </div>
+        );
       default:
-        return modifiedText
+        return modifiedText;
     }
-  }
+  };
 
   return (
     <div className="mb-8 rounded-lg bg-white pb-12 shadow-lg lg:p-8">
-      <div className="mb-6 overflow-hidden shadow-md lg:p-8">
-        <img
+      <div className="h-400   mb-6 w-full overflow-hidden rounded-t-lg shadow-md ">
+        <Image
+          loader={graphCMSImageLoader}
+          height={200}
+          width={400}
+          objectFit={'cover'}
+          layout="responsive"
           alt={post.title}
-          className="h-full w-full rounded-t-lg object-top"
           src={
-            post?.featuredImage?.url ??
-            'https://maxcdn.bootstrapcdn.com/bootstrap/'
+            post?.featuredImage?.url ?? 'https://picsum.photos/200/300/?blur'
           }
         />
       </div>
@@ -76,8 +84,7 @@ function PostDetail({ post }) {
         <div className="mb-8 flex w-full items-center">
           <div className="mb-4 mr-8 flex w-full  items-center  lg:mb-0 lg:w-auto">
             <Image
-              unoptimized
-              // loader={grpahCMSImageLoader}
+              loader={graphCMSImageLoader}
               alt={post?.author?.name}
               height="30px"
               width="30px"
@@ -108,17 +115,19 @@ function PostDetail({ post }) {
             </span>
           </div>
         </div>
-        <h1 className="mb-8 text-3xl font-semibold ">{post?.title}</h1>
+        <h1 className="mb-8 select-none text-3xl  font-semibold">
+          {post?.title}
+        </h1>
         {post?.content?.raw?.children?.map((typeObj, index) => {
           const children = typeObj?.children?.map((item, itemIndex) =>
             getContentFragment(itemIndex, item.text, item)
-          )
+          );
 
-          return getContentFragment(index, children, typeObj, typeObj.type)
+          return getContentFragment(index, children, typeObj, typeObj.type);
         })}
       </div>
     </div>
-  )
+  );
 }
 
-export default PostDetail
+export default PostDetail;

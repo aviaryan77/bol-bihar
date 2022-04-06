@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getCategories } from '@/services';
 
 function Header() {
@@ -14,12 +15,13 @@ function Header() {
         <div className="block md:float-left">
           <Link href="/">
             <span className="curser-pointer flex items-center text-4xl font-bold text-white">
-              <div className="mr-2 h-16 w-16 flex-none rounded-full border-b border-r border-gray-50">
-                <img
+              <div className="mr-2 h-16 w-16 flex-none rounded-full border-t border-r border-yellow-500">
+                <Image
                   alt={'bol bihar logo'}
                   height="120px"
                   width="120px"
-                  className="rounded-full align-middle "
+                  layout="responsive"
+                  // className="rounded-full align-middle"
                   src={'/logo.webp'}
                 />
               </div>
