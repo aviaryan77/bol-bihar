@@ -26,11 +26,13 @@ const PostWidget = ({ categories, slug }) => {
       {relatedPosts.map((post) => {
         return (
           <div key={post.title} className="mb-4 flex w-full items-center">
-            <div className="w-16 flex-none  align-middle">
+            <div className="h-16 w-16 flex-none  align-middle">
               <Image
                 alt={post?.title}
-                height="60px"
-                width="60px"
+                height="60"
+                width="60"
+                objectFit="cover"
+                layout="responsive"
                 className="rounded-full"
                 src={post?.featuredImage?.url || '/bg.jpeg'}
                 loader={graphCMSImageLoader}
