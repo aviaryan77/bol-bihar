@@ -1,12 +1,13 @@
 import React from 'react';
+import Script from 'next/script';
 
 const Footer = () => {
   return (
     <footer className="relative bg-gray-900 pt-8 pb-6 opacity-80 shadow">
-      <link
-        rel="stylesheet"
-        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-      ></link>
+      <Script
+        lazyOnload
+        src="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+      />
 
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap text-left lg:text-left">
