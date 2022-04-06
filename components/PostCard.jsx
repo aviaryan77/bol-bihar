@@ -24,15 +24,19 @@ const PostCard = ({ post }) => {
       </h1>
       <div className="mb-8 block w-full items-center justify-center text-center lg:flex">
         <div className="mb-4 mr-8 flex w-full   items-center justify-center lg:mb-0 lg:w-auto">
-          <Image
-            unoptimized
-            loader={graphCMSImageLoader}
-            alt={post?.author?.name}
-            height="30px"
-            width="30px"
-            className="rounded-full align-middle"
-            src={post?.author?.photo?.url || '/bg.jpeg'}
-          />
+          <div className="h-8 w-8 flex-none align-middle">
+            <Image
+              loader={graphCMSImageLoader}
+              alt={post.author.name}
+              className="rounded-full align-middle drop-shadow-lg"
+              src={post?.author?.photo?.url || '/bg.jpeg'}
+              height={30}
+              width={30}
+              objectFit="cover"
+              layout="responsive"
+            />
+          </div>
+
           <p className="ml-2 inline align-middle text-lg font-medium text-gray-700">
             {post?.author?.name}
           </p>
