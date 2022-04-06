@@ -75,7 +75,7 @@ const FeaturedPosts = () => {
 
   return (
     <div>
-      {dataLoaded ? (
+      {!dataLoaded ? (
         <Carousel
           infinite
           customLeftArrow={customLeftArrow}
@@ -88,9 +88,9 @@ const FeaturedPosts = () => {
           ))}
         </Carousel>
       ) : (
-        <div className="flex w-[288]">
-          <SkeletonCard />
-          <SkeletonCard />
+        <div className="flex min-h-[288px] ">
+          <SkeletonCard key={1} />
+          <SkeletonCard key={2} />
         </div>
       )}
     </div>
