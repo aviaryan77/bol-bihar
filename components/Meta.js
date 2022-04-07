@@ -11,6 +11,13 @@ const Meta = ({
       <meta name="keywords" content={keywords} />
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
+      <meta property="og:title" content={`${title} `} />
+      <meta
+        property="og:description"
+        content={`Learn more about ${description}`}
+      />
+      <meta property="og:url" content={`https://bol-bihar.vercel.com/blog/}`} />
+      <meta property="og:type" content="website" />
       <link rel="icon" href="/favicon.ico" />
       <title>{title}</title>
     </Head>

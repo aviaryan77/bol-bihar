@@ -16,7 +16,7 @@ function Header() {
           <Link href="/">
             <span className="curser-pointer flex items-center text-4xl font-bold text-white">
               <div className="mr-4 h-16 w-16 flex-none rounded-full  border-yellow-500">
-                <span class="absolute -ml-2 -mt-2 inline-flex h-20 w-20 animate-[spin_8s_linear_infinite] rounded-full border-b-2 border-l-2 border-dotted  border-white"></span>
+                <span className="absolute -ml-2 -mt-2 inline-flex h-20 w-20 animate-[spin_8s_linear_infinite] rounded-full border-b-2 border-l-2 border-dotted  border-white"></span>
 
                 <Image
                   alt={'bol bihar logo'}
