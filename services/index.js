@@ -101,8 +101,8 @@ export const getFeaturedPosts = async () => {
   const query = gql`
     query GetCategoryPost() {
       posts(where: {isFeaturedPost: true}
-        orderBy:createdAt_DSC
-        last:8
+       
+       
         ) {
         author {
           name
