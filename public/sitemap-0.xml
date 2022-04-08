@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>http://localhost:3000/sitemap.xml</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
-<url><loc>http://localhost:3000/sitemap.xml/post/bihar-board-11th-admission-2022</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
-<url><loc>http://localhost:3000/sitemap.xml/post/bihar-wine-case-06-04-2022</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
-<url><loc>http://localhost:3000/sitemap.xml/category/apna-bihar</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
-<url><loc>http://localhost:3000/sitemap.xml/category/technology</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
-<url><loc>http://localhost:3000/sitemap.xml/category/desh-dunia</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
-<url><loc>http://localhost:3000/sitemap.xml/category/entertainment</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
-<url><loc>http://localhost:3000/sitemap.xml/category/literature</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-07T08:22:57.496Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/category/apna-bihar</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/category/technology</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/category/desh-dunia</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/category/entertainment</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/category/literature</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/post/bihar-board-11th-admission-2022</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/post/bihar-wine-case-06-04-2022</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
+<url><loc>https://bol-bihar.varcel.app/post/indian-traffic-system</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-04-08T12:54:36.049Z</lastmod></url>
 </urlset>

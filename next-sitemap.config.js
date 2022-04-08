@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'http://localhost:3000/sitemap.xml',
+  siteUrl: 'https://bol-bihar.varcel.app',
   generateRobotsTxt: true, // (optional)
   sitemapSize: 7000,
 
