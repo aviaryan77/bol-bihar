@@ -1,13 +1,10 @@
 import React from 'react';
 import Script from 'next/script';
-
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="relative bg-gray-900 pt-8 pb-6 opacity-80 shadow">
-      <Script
-        lazyOnload
-        src="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-      />
+      <Script src="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" />
 
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap text-left lg:text-left">
@@ -18,31 +15,19 @@ const Footer = () => {
             <h5 className="mt-0 mb-2 text-lg text-white">
               Find us on any of these platforms, we respond 1-2 business days.
             </h5>
-            <div className="mt-6 mb-6 lg:mb-0">
-              <button
-                className="text-lightBlue-400 align-center mr-2 h-10 w-10 items-center justify-center rounded-full bg-white font-normal shadow-lg outline-none focus:outline-none"
-                type="button"
-              >
-                <i className="fab fa-twitter" />
-              </button>
-              <button
-                className="text-lightBlue-600 align-center mr-2 h-10 w-10 items-center justify-center rounded-full bg-white font-normal shadow-lg outline-none focus:outline-none"
-                type="button"
-              >
-                <i className="fab fa-facebook" />
-              </button>
-              <button
-                className="align-center mr-2 h-10 w-10 items-center justify-center rounded-full bg-white font-normal  shadow-lg outline-none focus:outline-none"
-                type="button"
-              >
-                <i className="fab fa-whatsapp"></i>
-              </button>
-              <button
-                className="align-center mr-2 h-10 w-10 items-center justify-center rounded-full bg-white font-normal  shadow-lg outline-none focus:outline-none"
-                type="button"
-              >
-                <i className="fab fa-linkedin"></i>
-              </button>
+            <div className="mt-6 mb-6 flex lg:mb-0">
+              <FaFacebookF
+                className="m-2 items-center justify-center rounded-full bg-white p-1 "
+                fontSize={40}
+              />
+              <FaTwitter
+                className="m-2 items-center justify-center rounded-full bg-white p-1 "
+                fontSize={40}
+              />
+              <FaLinkedinIn
+                className="m-2 items-center justify-center rounded-full bg-white p-1 "
+                fontSize={40}
+              />
             </div>
           </div>
           <div className="w-full px-4 lg:w-6/12">
